@@ -1,0 +1,22 @@
+
+<div class = "text-center">
+	<div class="jumbotron" >
+	<div class = "progressBar">
+		<progress-bar [progress]="getProgress()" [color-degraded]="{'0': '#00cbcb',  '15': '#f9c3d3', '25': '#fd8c8e'}">
+		</progress-bar>
+	</div>
+
+
+	<div class = "content">
+		<h2>{{getQuestion()}}</h2>
+	</div>
+
+	<div class = "navigation">
+		<button type="button" class="btn btn-danger" style = "margin-left: 20px; margin-right: 20px" (click) = "navButtonClicked(-1)">Back</button>	
+		<a href = {{getHelpUrl()}} target="_blank">
+			<button [disabled]="infoButtonActive()" type="button" class="btn btn-primary" style = "margin-left: 20px; margin-right: 20px">Help info</button>
+		</a>
+		<button type="button" class="btn btn-success" (click) = "navButtonClicked(1)" style = "margin-left: 20px; margin-right: 20px">Next</button>
+	</div>
+</div>
+</div>
