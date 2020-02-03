@@ -1,0 +1,19 @@
+.jumbotron{
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+.comment{
+	width: 800px;
+	background-color: #84848473;
+	margin: 10px;
+	padding: 3px;
+	border-color:  yellow; 
+	border-radius: 5px;
+}
+.username{
+	margin-top: 8px;
+	background: lightblue;
+}
+.text{
+	background-color: lightyellow; 
+}

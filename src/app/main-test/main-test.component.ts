@@ -45,10 +45,6 @@ export class MainTestComponent implements OnInit {
 		this.stage += (step);	
 	}
 
-	infoButtonClicked(){
-		//redirect
-	}
-
 	private initStageData(){
 		//hardcode????)))
 		this.data.push(new StageData("Ви готові?", null));
