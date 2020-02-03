@@ -3,26 +3,31 @@
 	<div class="jumbotron" >
 		<div class="row">
 			<div class="col">	
-				<button type="button" class="btn btn-primary btn-lg" style="width: 200px;"  (click) = "ShowCommentButtonClick()">{{GetButtonText()}}</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block"  (click) = "ShowCommentButtonClick()">{{GetButtonText()}}</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
+
 				<div *ngIf="GetCommentFlagState();else nonShow">
-
-
+					
 					<div class="row">
 						<div class="comment" *ngFor="let comment of Coments">
-							<div class="col" >
-                  				<div class="username"><h3>{{comment.GetUsername()}}</h3></div>
-                  			</div>
-                  			<div class="col">
-                  				<div class="text"><h5>{{comment.GetText()}}</h5></div>
-							</div>
+              				<div class="username"><h3>{{comment.GetUsername()}}</h3></div>
+              				<div class="text"><h5>{{comment.GetText()}}</h5></div>
+						</div>
+					</div>	
+					
+					<div class="row">
+						<div class = "newComment">	
+							Username
+							<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newUser" >
+							Comment
+							<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newText" >
+							<button type="button" class="btn btn-primary btn-lg" (click) = "AddCommentButtonClick()" style="margin-left: 10px;">Add Comment</button>
 						</div>
 					</div>
-                
-
+					
                 </div>
                 <ng-template #nonShow>  
                   <div>

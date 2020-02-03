@@ -11,6 +11,13 @@ export class UsersListComponent implements OnInit {
 	private CommentFlag: boolean;
 	private CommentButtonText: string;
 
+	public newUser:string;
+	public newText:string;
+
+	AddCommentButtonClick(){
+		this.Coments.push(new Comment(this.newUser, this.newText) );
+	}
+
 	public GetCommentFlagState():boolean{
 		return this.CommentFlag;
 	}
