@@ -3,11 +3,11 @@ import { Comment } from './comment';
 
 
 @Component({
-  selector: 'app-users-list',
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.css']
+  selector: 'app-comments-list',
+  templateUrl: './comments-list.component.html',
+  styleUrls: ['./comments-list.component.css']
 })
-export class UsersListComponent implements OnInit {
+export class CommentsListComponent implements OnInit {
 
 	public Coments: Array<Comment> = []; 
 	private CommentFlag: boolean;
