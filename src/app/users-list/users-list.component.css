@@ -2,22 +2,17 @@
 	padding-top: 30px;
     padding-bottom: 30px;
 }
-.comment{
-	width: 800px;
-	background-color: #84848473;
-	margin: 10px;
-	padding: 3px;
-	border-color:  yellow; 
-	border-radius: 5px;
-}
-.username{
+.card{
 	margin-top: 8px;
 	margin-left: 8px;
 	margin-right: 8px;
 	background: lightblue;
 }
-.text{
-	margin-left: 8px;
-	margin-right: 8px;
-	background-color: lightyellow; 
+.card-title{
+	border-radius: 5px;
+	border-color: white;
+}
+.card-text{
+	border-radius: 5px;
+	border-color: white;
 }

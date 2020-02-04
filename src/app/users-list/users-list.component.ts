@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Input, Component, OnInit, Output } from '@angular/core';
+import { Comment } from './comment';
+
 
 @Component({
   selector: 'app-users-list',
@@ -11,11 +13,8 @@ export class UsersListComponent implements OnInit {
 	private CommentFlag: boolean;
 	private CommentButtonText: string;
 
-	public newUser:string;
-	public newText:string;
-
-	AddCommentButtonClick(){
-		this.Coments.push(new Comment(this.newUser, this.newText) );
+	addComment(newComment:Comment){
+		this.Coments.push(newComment);
 	}
 
 	public GetCommentFlagState():boolean{
@@ -49,21 +48,3 @@ export class UsersListComponent implements OnInit {
 }
 
 
-class Comment{
-
-	private username: string;
-	private text: string;
-
-	constructor(un: string, text: string){
-		this.username = un;
-		this.text = text; 	
-	}
-
-	public GetUsername(): string {
-		return this.username;
-	}
-
-	public GetText(): string {
-		return this.text;
-	}
-}

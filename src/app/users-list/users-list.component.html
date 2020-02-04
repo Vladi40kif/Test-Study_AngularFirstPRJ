@@ -6,34 +6,21 @@
 				<button type="button" class="btn btn-primary btn-lg btn-block"  (click) = "ShowCommentButtonClick()">{{GetButtonText()}}</button>
 			</div>
 		</div>
+		
 		<div class="row">
 			<div class="col">
-
 				<div *ngIf="GetCommentFlagState();else nonShow">
 					
-					<div class="row">
-						<div class="comment" *ngFor="let comment of Coments">
-              				<div class="username"><h3>{{comment.GetUsername()}}</h3></div>
-              				<div class="text"><h5>{{comment.GetText()}}</h5></div>
-						</div>
-					</div>	
-					
-					<div class="row">
-						<div class = "newComment">	
-							Username
-							<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newUser" >
-							Comment
-							<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newText" >
-							<button type="button" class="btn btn-primary btn-lg" (click) = "AddCommentButtonClick()" style="margin-left: 10px;">Add Comment</button>
-						</div>
-					</div>
-					
-                </div>
-                <ng-template #nonShow>  
-                  <div>
-                  	<h4> ^^ PRESS BUTTON ^^ </h4>
-                  </div>  
-                </ng-template>  
+					<app-show-comment *ngFor="let comment of Coments" [comment] = "comment"> </app-show-comment>
+					<app-add-comment (newCommentEvent) = "addComment($event)" > </app-add-comment>
+
+				</div>
+
+				<ng-template #nonShow>  
+					<div>
+						<h4> ^^ PRESS BUTTON ^^ </h4>
+					</div>  
+				</ng-template>  
 			</div>
 		</div>
 
