@@ -11,7 +11,6 @@ export class ShowCommentComponent implements OnInit {
 
 	public comment:Comment;
 
-
   	constructor() { }
 
   	ngOnInit() {}

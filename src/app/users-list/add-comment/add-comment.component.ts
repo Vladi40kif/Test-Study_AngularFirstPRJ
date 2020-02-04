@@ -9,13 +9,10 @@ import { Comment } from '../comment';
 })
 export class AddCommentComponent implements OnInit {
 
-	public newUser: string;
-	public newText: string;
-
 	newCommentEvent = new EventEmitter<Comment>();
 
-	AddCommentButtonClick(){
-		this.newCommentEvent.emit(new Comment(this.newUser, this.newText));
+	AddCommentButtonClick(newUser:string, newText:string){
+		this.newCommentEvent.emit(new Comment(newUser, newText));
 	}
 
 

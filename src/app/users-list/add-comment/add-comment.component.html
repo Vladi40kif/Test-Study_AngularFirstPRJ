@@ -2,10 +2,10 @@
 	<div class = "col">
 		<div class = "newComment">	
 			Username
-			<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newUser" >
+			<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #Username >
 			Comment
-			<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newText" >
-			<button type="button" class="btn btn-primary btn-lg" (click) = "AddCommentButtonClick()" style="margin-left: 10px;">Add Comment</button>
+			<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #Text >
+			<button type="button" class="btn btn-primary btn-lg" (click) = "AddCommentButtonClick(Username.value, Text.value)" style="margin-left: 10px;">Add Comment</button>
 		</div>
 	</div>
 </div>

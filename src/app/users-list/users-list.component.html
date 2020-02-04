@@ -10,10 +10,8 @@
 		<div class="row">
 			<div class="col">
 				<div *ngIf="GetCommentFlagState();else nonShow">
-					
 					<app-show-comment *ngFor="let comment of Coments" [comment] = "comment"> </app-show-comment>
 					<app-add-comment (newCommentEvent) = "addComment($event)" > </app-add-comment>
-
 				</div>
 
 				<ng-template #nonShow>  
