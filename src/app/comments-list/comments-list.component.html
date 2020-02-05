@@ -1,27 +1,15 @@
-<div class = "text-center">
-	<h2> Users Comment</h2>
-	<div class="jumbotron" >
-		<div class="row">
-			<div class="col">	
-				<button type="button" class="btn btn-primary btn-lg btn-block"  (click) = "ShowCommentButtonClick()">{{GetButtonText()}}</button>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col">
-				<div *ngIf="GetCommentFlagState();else nonShow">
-					<app-show-comment *ngFor="let comment of Coments" [comment] = "comment"> </app-show-comment>
-					<app-add-comment (newCommentEvent) = "addComment($event)" > </app-add-comment>
-				</div>
+<h2> Users Comment</h2>
+<div class="jumbotron" >
+	
+	<button type="button" class="btn btn-primary btn-lg btn-block"  (click) = "ShowCommentButtonClick()">{{GetButtonText()}}</button>
 
-				<ng-template #nonShow>  
-					<div>
-						<h4> ^^ PRESS BUTTON ^^ </h4>
-					</div>  
-				</ng-template>  
-			</div>
-		</div>
-
-
+	<div *ngIf="GetCommentFlagState();else nonShow">
+		<app-show-comment *ngFor="let comment of Coments" [comment] = "comment"> </app-show-comment>
+		<app-add-comment (newCommentEvent) = "addComment($event)" > </app-add-comment>
 	</div>
+
+	<ng-template #nonShow>  
+		<h4> ^^ PRESS BUTTON ^^ </h4>
+	</ng-template>  
+
 </div>

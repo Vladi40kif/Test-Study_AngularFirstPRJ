@@ -1,9 +1,3 @@
 .jumbotron{
-	padding-top: 30px;
-    padding-bottom: 30px;
-	align-items: center;
-}
-
-.content{
-	height: 150px;
+	padding: 10px;
 }
