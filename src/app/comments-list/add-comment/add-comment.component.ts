@@ -14,7 +14,6 @@ export class AddCommentComponent implements OnInit {
     @ViewChild("Text", {static: false}) text: ElementRef;
     @ViewChild("Username", {static: false}) username: ElementRef;
 
-
 	AddCommentButtonClick(newUser:string, newText:string){
         console.log(this.text.nativeElement.value, this.username.nativeElement.value );
         this.newCommentEvent.emit(new Comment(newUser, newText));
